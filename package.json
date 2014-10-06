@@ -1,5 +1,5 @@
 {
-  "name": "optional",
+  "name": "guava-optional",
   "author": "Cory Parrish",
   "version": "1.0.7",
   "description": "Support for Guava like Optionals in Node.js.",
