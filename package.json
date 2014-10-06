@@ -1,0 +1,18 @@
+{
+  "name": "optional",
+  "author": "Cory Parrish",
+  "version": "1.0.7",
+  "description": "Support for Guava like Optionals in Node.js.",
+  "homepage": "https://github.com/corybill/Optional",
+  "bugs": {
+    "url": "https://github.com/corybill/Optional/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/corybill/Optional.git"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.11.0"
+  }
+}
