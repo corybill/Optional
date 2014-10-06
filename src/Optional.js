@@ -8,10 +8,7 @@ function Present(item) {
 }
 
 Present.prototype.get = function () {
-  if (!this.item) {
-    throw new Error("Illegal State Error: Value must be defined.");
-  }
-
+  preconditions.shouldBeDefined(this.item, "Illegal State Error: Value must be defined.");
   return this.item;
 };
 
