@@ -1,14 +1,26 @@
 #Preconditions Library
 ####Support for Guava like Optionals in Node.js
 ####Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
-####FYI - I am in no way associated with Google.
+<p>FYI - I am in no way associated with Google.</p>
 
-###Known Issues
-1. None so far...
+###Install
+<pre>
+    <code>
+        npm install guava-optional
+   </code>
+</pre>
+
+###Source Code
+<pre>
+    <code>
+        https://github.com/corybill/Optional
+   </code>
+</pre>
 
 <p>NOTE: In javascript we have the concept of undefined and null.  For the case of this library they are both treated as the same thing, some 'falsy' value.
     Therefore, wherever you see 'null' or 'undefined', you can read 'null or undefined'.</p>
 
+###Description
 <p>Careless use of null (and undefined in javascript) can cause a staggering variety of bugs. Studying the Google code base, (they) found that something like 95% of
   collections weren't supposed to have any null (or undefined) values in them, and having those fail fast rather than silently accept null (or undefined) would have been
   helpful to developers.  Additionally, null (or undefined) is unpleasantly ambiguous.  That said, there are times when null (or undefined) is the right and correct
@@ -18,8 +30,6 @@
   many of Guava's utilities are designed to fail fast in the presence of null (or undefined) rather than allow nulls to be used, so long as there is a null-friendly
   (or undefined-friendly) workaround available.  Additionally, Guava provides a number of facilities both to make using null (or undefined) easier, when you must,
   and to help you avoid using null (and undefined).</p>
-
-
 
 ###High Level Info
 ####Optional Static
@@ -47,21 +57,6 @@ The Absent instance has 6 prototype methods.
 4. orNull - Always returns undefined.
 5. isPresent - Always returns false as the item is always 'falsy'.
 6. transform -  It will always return the Absent instance because the item is always 'falsy'.
-
-
-###Install
-<pre>
-    <code>
-        npm install optional
-   </code>
-</pre>
-
-###Source Code
-<pre>
-    <code>
-        https://github.com/corybill/Optional
-   </code>
-</pre>
 
 ###Examples
 There are plenty of examples using the Guava's Java API and it should be straight forward to follow these examples.  Also you can look at the tests found in the ./spec folder.
