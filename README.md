@@ -1,4 +1,4 @@
-#Preconditions Library
+#Optionals Library
 ####Support for Guava like Optionals in Node.js
 ####Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
 <p>FYI - I am in no way associated with Google.</p>
