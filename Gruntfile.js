@@ -21,6 +21,7 @@ module.exports = function (grunt) {
         loopfunc: true,
         globals: {
           screen: true,
+          spyOn: true,
           navigator: true,
           Parallax: true,
           document: true,

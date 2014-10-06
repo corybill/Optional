@@ -1,12 +1,13 @@
 "use strict";
 
 var Absent = require("./Absent");
+var preconditions = require("preconditions").singleton();
 
-function Optional(item) {
+function Present(item) {
   this.item = item;
 }
 
-Optional.prototype.getItem = function () {
+Present.prototype.get = function () {
   if (!this.item) {
     throw new Error("Illegal State Error: Value must be defined.");
   }
@@ -14,48 +15,49 @@ Optional.prototype.getItem = function () {
   return this.item;
 };
 
-Optional.prototype.or = function (item) {
-  return this.item || item;
+Present.prototype.or = function (secondChoice) {
+  preconditions.shouldBeDefined(secondChoice, "use Optional.orNull() instead of Optional.or(null)");
+  return this.item || secondChoice;
 };
 
-Optional.prototype.orUndefined = function () {
+Present.prototype.orUndefined = function () {
+  return this.orNull();
+};
+
+Present.prototype.orNull = function () {
   return this.item || undefined;
 };
 
-Optional.prototype.isPresent = function () {
+Present.prototype.isPresent = function () {
   return (!this.item) ? false : true;
 };
 
-Optional.prototype.transform = function (func) {
-  if (!func || !(func instanceof Function)) {
-    throw new Error("Illegal Argument Error: parameter must be  a Function");
-  }
-
+Present.prototype.transform = function (func) {
+  preconditions.shouldBeFunction(func, "Illegal Argument Error: parameter must be  a Function");
   return this.isPresent() ? func(this.item) : Absent.getInstance();
 };
 
-module.exports = {
+var Optional = {
   of: function (item) {
-    if (!item) {
-      throw new Error("Illegal State Error: Must contain defined value.");
-    }
-    return new Optional(item);
+    preconditions.shouldBeDefined(item, "Illegal State Error: Must contain defined value.");
+    return new Present(item);
   },
   absent: function () {
     return Absent.getInstance();
   },
 
   fromUndefinedable: function (item) {
-    return (!item) ? Absent.getInstance() : new Optional(item);
+    return this.fromNullable(item);
   },
 
   fromNullable: function (item) {
-    throw new Error("Illegal State Error: Use 'fromUndefinedable()'.");
+    return (!item) ? Absent.getInstance() : new Present(item);
   },
 
-  newOptional: function (item) {
-    return new Optional(item);
+  __newOptional: function (item) {
+    return new Present(item);
   },
-
-  __constructor: Optional
+  __constructor: Present
 };
+
+module.exports = Optional;
