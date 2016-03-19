@@ -1,6 +1,8 @@
 #Optionals Library
 ####Support for Guava like Optionals in Node.js
 ####Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
+
+[![Join the chat at https://gitter.im/corybill/optional](https://badges.gitter.im/corybill/optional.svg)](https://gitter.im/corybill/optional?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <p>FYI - I am in no way associated with Google.</p>
 
 ###Install
