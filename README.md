@@ -1,21 +1,16 @@
-#Optionals Library
-####Support for Guava like Optionals in Node.js
-####Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
+# Optionals Library
+
+[![view on npm](http://img.shields.io/npm/v/guava-optional.svg)](https://www.npmjs.org/package/guava-optional)
+[![npm module downloads](http://img.shields.io/npm/dt/guava-optional.svg)](https://www.npmjs.org/package/guava-optional)
+[![Build Status](https://travis-ci.org/corybill/optional.svg?branch=master)](https://travis-ci.org/corybill/optional)
+[![Gitter](https://badges.gitter.im/corybill/optional.svg)](https://gitter.im/corybill/optional?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+#### Support for Guava like Optionals in Node.js
+#### Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
 <p>FYI - I am in no way associated with Google.</p>
 
 ###Install
-<pre>
-    <code>
-        npm install guava-optional
-   </code>
-</pre>
-
-###Source Code
-<pre>
-    <code>
-        https://github.com/corybill/Optional
-   </code>
-</pre>
+<pre><code>npm install guava-optional</code></pre>
 
 <p>NOTE: In javascript we have the concept of undefined and null.  For the case of this library they are both treated as the same thing, some 'falsy' value.
     Therefore, wherever you see 'null' or 'undefined', you can read 'null or undefined'.</p>

@@ -1,8 +1,8 @@
 "use strict";
 
-var Optional = require("./../src/Optional");
-var Absent = require("./../src/Absent");
-var index = require("./../index");
+const Optional = require("./../lib/optional"),
+  Absent = require("./../lib/absent"),
+  Present = require("./../lib/present");
 
 describe("Optional", function () {
   var transformer;
