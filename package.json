@@ -2,6 +2,7 @@
   "name": "guava-optional",
   "author": "Cory Parrish",
   "version": "3.0.0",
+  "main": "./lib/optional",
   "description": "Support for Guava like optionals in Node.js.",
   "homepage": "https://github.com/corybill/optional",
   "bugs": {
@@ -26,6 +27,7 @@
     "optional"
   ],
   "devDependencies": {
+    "chance": "^1.0.1",
     "eslint": "^2.4.0",
     "maddox": "0.0.8"
   },
