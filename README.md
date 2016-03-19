@@ -9,13 +9,13 @@
 #### Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
 <p>FYI - I am in no way associated with Google.</p>
 
-###Install
+## Install
 <pre><code>npm install guava-optional</code></pre>
 
 <p>NOTE: In javascript we have the concept of undefined and null.  For the case of this library they are both treated as the same thing, some 'falsy' value.
     Therefore, wherever you see 'null' or 'undefined', you can read 'null or undefined'.</p>
 
-###Description
+## Description
 <p>Careless use of null (and undefined in javascript) can cause a staggering variety of bugs. Studying the Google code base, (they) found that something like 95% of
   collections weren't supposed to have any null (or undefined) values in them, and having those fail fast rather than silently accept null (or undefined) would have been
   helpful to developers.  Additionally, null (or undefined) is unpleasantly ambiguous.  That said, there are times when null (or undefined) is the right and correct
@@ -26,11 +26,11 @@
   (or undefined-friendly) workaround available.  Additionally, Guava provides a number of facilities both to make using null (or undefined) easier, when you must,
   and to help you avoid using null (and undefined).</p>
 
-###Examples
+## Examples
 There are plenty of examples using the Guava's Java API and it should be straight forward to follow these examples.  Also you can look at the tests found in the ./spec folder.
 They include an example of every call possible in the library.  That being said I have included some basic use cases below.
 
-####Using Optional.of()
+#### Using Optional.of()
 <pre>
     <code>
         var Optional = require("optional");
@@ -41,7 +41,7 @@ They include an example of every call possible in the library.  That being said 
    </code>
 </pre>
 
-####Using Optional.or()
+#### Using Optional.or()
 <pre>
     <code>
         var Optional = require("optional");
@@ -52,7 +52,7 @@ They include an example of every call possible in the library.  That being said 
    </code>
 </pre>
 
-####Using Optional.absent()
+#### Using Optional.absent()
 <pre>
     <code>
         var Optional = require("optional");
@@ -69,7 +69,7 @@ They include an example of every call possible in the library.  That being said 
    </code>
 </pre>
 
-####Using Optional.fromNullable()
+#### Using Optional.fromNullable()
 <pre>
     <code>
         var Optional = require("optional");
@@ -82,9 +82,24 @@ They include an example of every call possible in the library.  That being said 
    </code>
 </pre>
 
-###Missing API or Bugs
+## Missing API or Bugs
 Please reach out to me (Cory Parrish) if you would like a new Optional type added or if you think you have found a bug.
 
+## NPM Scripts
+1. npm run test - Run linter and unit tests.
+2. npm run ut - Use Maddox to Run Unit Tests.
+3. npm run perf - Use Maddox to Performance metrics.
+3. npm run uap - Use Maddox to Unit Tests and Performance metrics.
+4. npm run lint - Run linter.
+5. npm run docs - Rebuild public API Docs.
+
+## Releases
+  * 3.0.0
+    * Now uses errr interface for preconditions. 
+    * Redesign of code.
+    * Now uses maddox for unit testing.
+    * Moves to Node 5 paradigms.
+    
 ## API
 
 <dl>
