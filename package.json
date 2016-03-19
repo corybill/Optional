@@ -29,6 +29,7 @@
   "devDependencies": {
     "chance": "^1.0.1",
     "eslint": "^2.4.0",
+    "jsdoc-to-markdown": "^1.3.3",
     "maddox": "0.0.8"
   },
   "dependencies": {
