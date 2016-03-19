@@ -1,13 +1,12 @@
 # Optionals Library
+##### Support for Guava like Optionals in Node.js
+<p>Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).</p>
+<p>FYI - I am in no way associated with Google.</p>
 
 [![view on npm](http://img.shields.io/npm/v/guava-optional.svg)](https://www.npmjs.org/package/guava-optional)
 [![npm module downloads](http://img.shields.io/npm/dt/guava-optional.svg)](https://www.npmjs.org/package/guava-optional)
 [![Build Status](https://travis-ci.org/corybill/optional.svg?branch=master)](https://travis-ci.org/corybill/optional)
 [![Gitter](https://badges.gitter.im/corybill/optional.svg)](https://gitter.im/corybill/optional?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-#### Support for Guava like Optionals in Node.js
-#### Content in this document was copied from the Optionals documentation (https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained).
-<p>FYI - I am in no way associated with Google.</p>
 
 ## Install
 <pre><code>npm install guava-optional</code></pre>
